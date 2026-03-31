@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Tara ★ 18</title>
+    <style>
+        :root {
+            --green: #556b2f; /* Dark olive */
+            --soft-pink: #f4c2c2;
+            --cream: #fdf5e6;
+            --text: #2f4f4f;
+        }
+
+        body {
+            background-color: var(--cream);
+            font-family: 'Courier New', Courier, monospace;
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header { margin-bottom: 50px; }
+        h1 { font-size: 2.5rem; color: var(--green); margin-bottom: 5px; }
+        .subtitle { font-style: italic; color: var(--text); opacity: 0.8; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border: 1.5px dashed var(--green);
+            padding: 30px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 200px;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 10px 10px 0px var(--soft-pink);
+        }
+
+        .card h3 { font-size: 1.2rem; margin-bottom: 20px; }
+        
+        .content {
+            display: none; /* Hidden by default */
+            font-size: 0.9rem;
+            animation: fadeIn 0.5s;
+        }
+
+        .content a {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--green);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .star { color: var(--soft-pink); font-size: 1.5rem; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        footer { margin-top: 60px; font-size: 0.7rem; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sretan rođendan, Tara! <span class="star">★</span></h1>
+        <p class="subtitle">Open when...</p>
+    </header>
+
+    <div class="grid">
+        <div class="card" onclick="this.querySelector('.content').style.display = 'block'; this.querySelector('h3').style.display = 'none'">
+            <h3>...math feels like chaos</h3>
+            <div class="content">
+                <p>Remember: stars don't solve equations, they just shine. You are made of stardust, not numbers.</p>
+                <a href="https://www.google.com/search?q=aesthetic+fractals+in+nature" target="_blank">Take a breath</a>
+            </div>
+        </div>
+
+        <div class="card" onclick="this.querySelector('.content').style.display = 'block'; this.querySelector('h3').style.display = 'none'">
+            <h3>...the house is too loud</h3>
+            <div class="content">
+                <p>Put on your headphones. Here is your private island of silence.</p>
+                <a href="https://open.spotify.com/artist/1N7WHe968vI4YnvG969I2y" target="_blank">Listen to Adrienne</a>
+            </div>
+        </div>
+
+        </div>
+
+    <footer>EST. 2026 — FOR THE GIRL WHO LOVES DEER & BOOKS</footer>
+
+</body>
+</html>
